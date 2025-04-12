@@ -18,7 +18,7 @@ const products = [
     {
       "productId": 1,
       "categoryId": 4,
-      "productName": "Stout Ale",
+      "productName": "Stout Ale A",
       "description": "Light and crisp stout",
       "image": "https://cdn.pixabay.com/photo/2022/04/07/14/31/bottle-7117637_1280.jpg",
       "brand": "ThirstyBear",
@@ -54,7 +54,7 @@ const products = [
     {
       "productId": 2,
       "categoryId": 3,
-      "productName": "Pilsner Ale",
+      "productName": "Pilsner Ale A",
       "description": "Bold and hoppy pilsner",
       "image": "https://cdn.pixabay.com/photo/2017/01/21/21/15/beer-1998293_1280.jpg",
       "brand": "ThirstyBear",
@@ -90,7 +90,7 @@ const products = [
     {
       "productId": 3,
       "categoryId": 4,
-      "productName": "Porter Ale",
+      "productName": "Porter Ale A",
       "description": "Light and crisp porter",
       "image": "https://cdn.pixabay.com/photo/2017/01/21/21/15/beer-1998293_1280.jpg",
       "brand": "FrostyMug",
@@ -132,7 +132,7 @@ const products = [
     {
       "productId": 4,
       "categoryId": 3,
-      "productName": "Amber Ale Brew",
+      "productName": "Amber Ale Brew A",
       "description": "Bold and hoppy amber",
       "image": "https://cdn.pixabay.com/photo/2022/04/07/14/31/bottle-7117637_1280.jpg",
       "brand": "HopKing",
@@ -162,7 +162,7 @@ const products = [
     {
       "productId": 5,
       "categoryId": 4,
-      "productName": "Wheat Beer Beer",
+      "productName": "Wheat Beer Beer A",
       "description": "Bold and hoppy wheat",
       "image": "https://cdn.pixabay.com/photo/2017/01/21/21/15/beer-1998293_1280.jpg",
       "brand": "ThirstyBear",
@@ -198,7 +198,7 @@ const products = [
     {
       "productId": 6,
       "categoryId": 3,
-      "productName": "Lager Ale",
+      "productName": "Lager Ale A",
       "description": "Bold and hoppy lager",
       "image": "https://cdn.pixabay.com/photo/2022/04/07/14/31/bottle-7117637_1280.jpg",
       "brand": "AleWorks",
@@ -228,7 +228,7 @@ const products = [
     {
       "productId": 7,
       "categoryId": 1,
-      "productName": "Porter Brew",
+      "productName": "Porter Brew B",
       "description": "Smooth and refreshing porter",
       "image": "https://cdn.pixabay.com/photo/2016/11/29/12/32/beach-1869523_1280.jpg",
       "brand": "FrostyMug",
@@ -270,7 +270,7 @@ const products = [
     {
       "productId": 8,
       "categoryId": 4,
-      "productName": "Lager Beer",
+      "productName": "Lager Beer B",
       "description": "Dark and rich lager",
       "image": "https://cdn.pixabay.com/photo/2017/01/21/21/15/beer-1998293_1280.jpg",
       "brand": "AleWorks",
