@@ -28,7 +28,7 @@ const products = [
       "hasCannabis": false,
       "allergenInfo": "Contains barley",
       "nutritionalInfo": "Calories: 124, Carbs: 12g",
-      "alcoholByVolume": 5.3,
+      "alcoholByVolume": 5.5,
       "weightGrams": 750,
       "expiryDate": "2026-08-17",
       "alcoholic": true,
