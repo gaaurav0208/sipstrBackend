@@ -20,6 +20,7 @@ const products = [
     categoryId: 1,
     productName: 'Lager Beer',
     description: 'Smooth and refreshing lager',
+    image: 'https://cdn.pixabay.com/photo/2014/08/10/18/06/beers-414914_1280.jpg',
     brand: 'BrewMaster',
     categoryName: 'Beer',
     taxCategory: 'Alcoholic Beverage',
@@ -45,6 +46,7 @@ const products = [
     categoryId: 1,
     productName: 'IPA Beer',
     description: 'Hoppy and strong IPA',
+    image: 'https://cdn.pixabay.com/photo/2017/01/21/21/15/beer-1998293_1280.jpg',
     brand: 'HopKing',
     variantsDTO: [
       { variantId: 103, packageName: '4-Pack Bottles', unitPrice: 11.99, volume: '500ml' },
