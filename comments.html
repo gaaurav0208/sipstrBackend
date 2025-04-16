@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Reddit Thread</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f7f8;
+      padding: 20px;
+    }
+
+    .post {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .comments {
+      margin-top: 20px;
+    }
+
+    .comment {
+      margin: 10px 0;
+      padding: 10px;
+      background: #fff;
+      border-left: 3px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .comment .replies {
+      margin-left: 20px;
+    }
+
+    .comment-form {
+      margin-top: 10px;
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 5px;
+    }
+
+    .btn {
+      padding: 5px 10px;
+      background: #0079d3;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn.small {
+      font-size: 12px;
+      padding: 3px 7px;
+      margin-top: 5px;
+    }
+
+    .reply-link {
+      cursor: pointer;
+      color: #0079d3;
+      font-size: 12px;
+      margin-top: 5px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="post">
+    <h2>🔥 Reddit-Style Post</h2>
+    <p>This is a sample post. Go ahead, roast it in the comments 💬</p>
+    
+    <div class="comment-form">
+      <textarea id="mainComment" placeholder="Add a comment..."></textarea>
+      <button class="btn" onclick="addComment()">Comment</button>
+    </div>
+
+    <div class="comments" id="commentsSection"></div>
+  </div>
+
+  <script>
+    function addComment(parentId = null) {
+      const textareaId = parentId ? `reply-${parentId}` : 'mainComment';
+      const textarea = document.getElementById(textareaId);
+      const text = textarea.value.trim();
+      if (!text) return;
+
+      const commentEl = document.createElement('div');
+      commentEl.className = 'comment';
+
+      const commentId = 'c-' + Date.now();
+
+      commentEl.innerHTML = `
+        <p>${text}</p>
+        <span class="reply-link" onclick="toggleReplyForm('${commentId}')">Reply</span>
+        <div class="comment-form" id="form-${commentId}" style="display:none;">
+          <textarea id="reply-${commentId}" placeholder="Write a reply..."></textarea>
+          <button class="btn small" onclick="addComment('${commentId}')">Reply</button>
+        </div>
+        <div class="replies" id="replies-${commentId}"></div>
+      `;
+
+      if (parentId) {
+        document.getElementById(`replies-${parentId}`).appendChild(commentEl);
+      } else {
+        document.getElementById('commentsSection').appendChild(commentEl);
+      }
+
+      textarea.value = '';
+    }
+
+    function toggleReplyForm(commentId) {
+      const form = document.getElementById(`form-${commentId}`);
+      form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>
