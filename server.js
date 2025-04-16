@@ -1195,6 +1195,11 @@ app.get('/products/:id', (req, res) => {
   product ? res.json(product) : res.status(404).json({ message: 'Product not found' });
 });
 
+// Endpoint to serve comments.html
+app.get('/comments', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'comments.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
